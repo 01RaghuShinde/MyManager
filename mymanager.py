@@ -2,21 +2,19 @@ from tkinter import *
 import os
 from tkinter import ttk
 
-
-
-
-
 win = Tk()
 win.config(bg='black')
 win.title('My Manager')
 
 title_label = Label(win,text="My Manager",font=('helvatica',30,'bold'),bg='black',fg='white')
 title_label.grid(row=0,column=0)
+
+#VARIABLE FOR WIDTH OF THE BUTTON
 A = 15
 def Quitt():
     win.destroy()
 
-
+#BUTTONS
 but1 = Button(win,width = A,text='Device manager',font=('helvatica',16,'bold'),bg='#FF131B',fg='#ffffff',command = lambda :os.system('devmgmt.msc'))
 but1.grid(row=1,column=0)
 but2 = Button(win,width = A,text='Control Panel',font=('helvatica',16,'bold'),bg='#FF131B',fg='#ffffff',command = lambda :os.system('control'))
